@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?pde version="3.5"?>
+
+<product name="DeployWorkbench" uid="org.graphstream.workbench.deploy.product" id="org.graphstream.workbench.gs_workbench" application="org.graphstream.workbench.application" version="0.0.1.devel" useFeatures="false" includeLaunchers="true">
+
+   <configIni use="default">
+   </configIni>
+
+   <launcherArgs>
+      <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts</vmArgsMac>
+   </launcherArgs>
+
+   <splash
+      location="org.graphstream.workbench"
+      startupProgressRect="305,288,300,10" />
+   <license>
+        <url>http://www.gnu.org/licenses/, http://www.cecill.info</url>
+        <text>
+   Copyright 2006 - 2011 
+     Julien Baudry	&lt;julien.baudry@graphstream-project.org&gt;
+     Antoine Dutot	&lt;antoine.dutot@graphstream-project.org&gt;
+     Yoann Pigné		&lt;yoann.pigne@graphstream-project.org&gt;
+     Guilhelm Savin	&lt;guilhelm.savin@graphstream-project.org&gt;
+ 
+This file is part of GraphStream &lt;http://graphstream-project.org&gt;.
+ 
+GraphStream is a library whose purpose is to handle static or dynamic
+graph, create them from scratch, file or any source and display them.
+
+This program is free software distributed under the terms of two licenses, the
+CeCILL-C license that fits European law, and the GNU Lesser General Public
+License. You can  use, modify and/ or redistribute the software under the terms
+of the CeCILL-C license as circulated by CEA, CNRS and INRIA at the following
+URL &lt;http://www.cecill.info&gt; or under the terms of the GNU LGPL as published by
+the Free Software Foundation, either version 3 of the License, or (at your
+option) any later version.
+
+This program is distributed in the hope that it will be useful, but WITHOUT ANY
+WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A
+PARTICULAR PURPOSE.  See the GNU Lesser General Public License for more details.
+
+You should have received a copy of the GNU Lesser General Public License
+along with this program.  If not, see &lt;http://www.gnu.org/licenses/&gt;.
+
+The fact that you are presently reading this means that you have had
+knowledge of the CeCILL-C and LGPL licenses and that you accept their terms.
+         </text>
+   </license>
+
+   <plugins>
+      <plugin id="com.ibm.icu"/>
+      <plugin id="org.eclipse.core.commands"/>
+      <plugin id="org.eclipse.core.contenttype"/>
+      <plugin id="org.eclipse.core.databinding"/>
+      <plugin id="org.eclipse.core.databinding.observable"/>
+      <plugin id="org.eclipse.core.databinding.property"/>
+      <plugin id="org.eclipse.core.expressions"/>
+      <plugin id="org.eclipse.core.jobs"/>
+      <plugin id="org.eclipse.core.runtime"/>
+      <plugin id="org.eclipse.core.runtime.compatibility.registry" fragment="true"/>
+      <plugin id="org.eclipse.equinox.app"/>
+      <plugin id="org.eclipse.equinox.common"/>
+      <plugin id="org.eclipse.equinox.preferences"/>
+      <plugin id="org.eclipse.equinox.registry"/>
+      <plugin id="org.eclipse.help"/>
+      <plugin id="org.eclipse.jface"/>
+      <plugin id="org.eclipse.jface.databinding"/>
+      <plugin id="org.eclipse.osgi"/>
+      <plugin id="org.eclipse.swt"/>
+      <plugin id="org.eclipse.swt.gtk.linux.x86_64" fragment="true"/>
+      <plugin id="org.eclipse.ui"/>
+      <plugin id="org.eclipse.ui.workbench"/>
+      <plugin id="org.graphstream.workbench"/>
+   </plugins>
+
+
+</product>

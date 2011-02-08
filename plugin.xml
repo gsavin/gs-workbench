@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="org.graphstream.workbench.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="RCP Perspective"
+            class="org.graphstream.workbench.Perspective"
+            id="org.graphstream.workbench.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="org.graphstream.workbench.commands.ExitHandler"
+            id="org.graphstream.workbench.commands.Exit"
+            name="Exit">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:org.eclipse.ui.main.menu">
+         <menu
+               id="fileMenu"
+               label="File">
+            <command
+                  commandId="org.graphstream.workbench.commands.Exit"
+                  style="push"
+                  tooltip="Exits the workbench">
+            </command>
+         </menu>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="org.graphstream.workbench.views.ListSS"
+            id="org.graphstream.workbench.views.ListSS"
+            name="ListSS"
+            restorable="true">
+      </view>
+   </extension>
+   <extension
+         id="gs_workbench"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="org.graphstream.workbench.application"
+            name="DeployWorkbench">
+         <property
+               name="appName"
+               value="DeployWorkbench">
+         </property>
+         <property
+               name="startupProgressRect"
+               value="305,288,300,10">
+         </property>
+         <property
+               name="preferenceCustomization"
+               value="plugin_customization.ini">
+         </property>
+      </product>
+   </extension>
+
+</plugin>
